@@ -1,0 +1,21 @@
+{
+  "name": "node-demo",
+  "version": "1.0.0",
+  "description": "A simple demo app in Node.js",
+  "main": "index.js",
+  "author": "Uzair Shamim <uzashamim@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "http": "^0.0.0"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/babel-node --presets node6 index.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-node6": "^11.0.0",
+    "mongoose": "^4.13.4"
+  }
+}
