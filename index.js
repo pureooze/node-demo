@@ -2,7 +2,10 @@ import http from 'http';
 import express from 'express'
 import mongoose from 'mongoose'
 import fs from 'fs'
-let bodyParser = require('body-parser')
+import bodyParser from 'body-parser'
+import userSchema from './models/userSchema'
+import portalSchema from './models/portalSchema'
+import roomSchema from './models/roomsSchema'
 
 // Define constants
 const LISTEN_PORT = 3000
@@ -20,7 +23,6 @@ database.on('error', function() {
 // Configure HTTP server
 let app = express()
 app.use(bodyParser.json())
-require('./models/userSchema')
 require('./routes')(app)
 app.listen(LISTEN_PORT)
 
